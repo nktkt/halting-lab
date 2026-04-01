@@ -187,4 +187,4 @@ Possible next steps:
 
 ## License
 
-No license file has been added yet. If you plan to publish this repository, add a license before making it public.
+This repository is available under the MIT License. See `LICENSE` for details.

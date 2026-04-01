@@ -1,0 +1,4199 @@
+=== countdown_001 | countdown | Counts register n from 1 to 0 and emits several summaries
+# family: countdown
+# variant: 001
+# initial register n: 1
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 1
+set ticks 0
+set checksum 1
+set mirror 1
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_002 | countdown | Counts register n from 2 to 0 and emits several summaries
+# family: countdown
+# variant: 002
+# initial register n: 2
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 2
+set ticks 0
+set checksum 2
+set mirror 2
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_003 | countdown | Counts register n from 3 to 0 and emits several summaries
+# family: countdown
+# variant: 003
+# initial register n: 3
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 3
+set ticks 0
+set checksum 3
+set mirror 3
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_004 | countdown | Counts register n from 4 to 0 and emits several summaries
+# family: countdown
+# variant: 004
+# initial register n: 4
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 4
+set ticks 0
+set checksum 4
+set mirror 4
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_005 | countdown | Counts register n from 5 to 0 and emits several summaries
+# family: countdown
+# variant: 005
+# initial register n: 5
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 5
+set ticks 0
+set checksum 5
+set mirror 5
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_006 | countdown | Counts register n from 6 to 0 and emits several summaries
+# family: countdown
+# variant: 006
+# initial register n: 6
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 6
+set ticks 0
+set checksum 6
+set mirror 6
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_007 | countdown | Counts register n from 7 to 0 and emits several summaries
+# family: countdown
+# variant: 007
+# initial register n: 7
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 7
+set ticks 0
+set checksum 7
+set mirror 7
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_008 | countdown | Counts register n from 8 to 0 and emits several summaries
+# family: countdown
+# variant: 008
+# initial register n: 8
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 8
+set ticks 0
+set checksum 8
+set mirror 8
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_009 | countdown | Counts register n from 9 to 0 and emits several summaries
+# family: countdown
+# variant: 009
+# initial register n: 9
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 9
+set ticks 0
+set checksum 9
+set mirror 9
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_010 | countdown | Counts register n from 10 to 0 and emits several summaries
+# family: countdown
+# variant: 010
+# initial register n: 10
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 10
+set ticks 0
+set checksum 10
+set mirror 10
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_011 | countdown | Counts register n from 11 to 0 and emits several summaries
+# family: countdown
+# variant: 011
+# initial register n: 11
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 11
+set ticks 0
+set checksum 11
+set mirror 11
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_012 | countdown | Counts register n from 12 to 0 and emits several summaries
+# family: countdown
+# variant: 012
+# initial register n: 12
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 12
+set ticks 0
+set checksum 12
+set mirror 12
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_013 | countdown | Counts register n from 13 to 0 and emits several summaries
+# family: countdown
+# variant: 013
+# initial register n: 13
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 13
+set ticks 0
+set checksum 13
+set mirror 13
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_014 | countdown | Counts register n from 14 to 0 and emits several summaries
+# family: countdown
+# variant: 014
+# initial register n: 14
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 14
+set ticks 0
+set checksum 14
+set mirror 14
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_015 | countdown | Counts register n from 15 to 0 and emits several summaries
+# family: countdown
+# variant: 015
+# initial register n: 15
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 15
+set ticks 0
+set checksum 15
+set mirror 15
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_016 | countdown | Counts register n from 16 to 0 and emits several summaries
+# family: countdown
+# variant: 016
+# initial register n: 16
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 16
+set ticks 0
+set checksum 16
+set mirror 16
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_017 | countdown | Counts register n from 17 to 0 and emits several summaries
+# family: countdown
+# variant: 017
+# initial register n: 17
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 17
+set ticks 0
+set checksum 17
+set mirror 17
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_018 | countdown | Counts register n from 18 to 0 and emits several summaries
+# family: countdown
+# variant: 018
+# initial register n: 18
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 18
+set ticks 0
+set checksum 18
+set mirror 18
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_019 | countdown | Counts register n from 19 to 0 and emits several summaries
+# family: countdown
+# variant: 019
+# initial register n: 19
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 19
+set ticks 0
+set checksum 19
+set mirror 19
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_020 | countdown | Counts register n from 20 to 0 and emits several summaries
+# family: countdown
+# variant: 020
+# initial register n: 20
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 20
+set ticks 0
+set checksum 20
+set mirror 20
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_021 | countdown | Counts register n from 21 to 0 and emits several summaries
+# family: countdown
+# variant: 021
+# initial register n: 21
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 21
+set ticks 0
+set checksum 21
+set mirror 21
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_022 | countdown | Counts register n from 22 to 0 and emits several summaries
+# family: countdown
+# variant: 022
+# initial register n: 22
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 22
+set ticks 0
+set checksum 22
+set mirror 22
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_023 | countdown | Counts register n from 23 to 0 and emits several summaries
+# family: countdown
+# variant: 023
+# initial register n: 23
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 23
+set ticks 0
+set checksum 23
+set mirror 23
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_024 | countdown | Counts register n from 24 to 0 and emits several summaries
+# family: countdown
+# variant: 024
+# initial register n: 24
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 24
+set ticks 0
+set checksum 24
+set mirror 24
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_025 | countdown | Counts register n from 25 to 0 and emits several summaries
+# family: countdown
+# variant: 025
+# initial register n: 25
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 25
+set ticks 0
+set checksum 25
+set mirror 25
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_026 | countdown | Counts register n from 26 to 0 and emits several summaries
+# family: countdown
+# variant: 026
+# initial register n: 26
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 26
+set ticks 0
+set checksum 26
+set mirror 26
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_027 | countdown | Counts register n from 27 to 0 and emits several summaries
+# family: countdown
+# variant: 027
+# initial register n: 27
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 27
+set ticks 0
+set checksum 27
+set mirror 27
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_028 | countdown | Counts register n from 28 to 0 and emits several summaries
+# family: countdown
+# variant: 028
+# initial register n: 28
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 28
+set ticks 0
+set checksum 28
+set mirror 28
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_029 | countdown | Counts register n from 29 to 0 and emits several summaries
+# family: countdown
+# variant: 029
+# initial register n: 29
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 29
+set ticks 0
+set checksum 29
+set mirror 29
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_030 | countdown | Counts register n from 30 to 0 and emits several summaries
+# family: countdown
+# variant: 030
+# initial register n: 30
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 30
+set ticks 0
+set checksum 30
+set mirror 30
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_031 | countdown | Counts register n from 31 to 0 and emits several summaries
+# family: countdown
+# variant: 031
+# initial register n: 31
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 31
+set ticks 0
+set checksum 31
+set mirror 31
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_032 | countdown | Counts register n from 32 to 0 and emits several summaries
+# family: countdown
+# variant: 032
+# initial register n: 32
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 32
+set ticks 0
+set checksum 32
+set mirror 32
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_033 | countdown | Counts register n from 33 to 0 and emits several summaries
+# family: countdown
+# variant: 033
+# initial register n: 33
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 33
+set ticks 0
+set checksum 33
+set mirror 33
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_034 | countdown | Counts register n from 34 to 0 and emits several summaries
+# family: countdown
+# variant: 034
+# initial register n: 34
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 34
+set ticks 0
+set checksum 34
+set mirror 34
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_035 | countdown | Counts register n from 35 to 0 and emits several summaries
+# family: countdown
+# variant: 035
+# initial register n: 35
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 35
+set ticks 0
+set checksum 35
+set mirror 35
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_036 | countdown | Counts register n from 36 to 0 and emits several summaries
+# family: countdown
+# variant: 036
+# initial register n: 36
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 36
+set ticks 0
+set checksum 36
+set mirror 36
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_037 | countdown | Counts register n from 37 to 0 and emits several summaries
+# family: countdown
+# variant: 037
+# initial register n: 37
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 37
+set ticks 0
+set checksum 37
+set mirror 37
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_038 | countdown | Counts register n from 38 to 0 and emits several summaries
+# family: countdown
+# variant: 038
+# initial register n: 38
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 38
+set ticks 0
+set checksum 38
+set mirror 38
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_039 | countdown | Counts register n from 39 to 0 and emits several summaries
+# family: countdown
+# variant: 039
+# initial register n: 39
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 39
+set ticks 0
+set checksum 39
+set mirror 39
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_040 | countdown | Counts register n from 40 to 0 and emits several summaries
+# family: countdown
+# variant: 040
+# initial register n: 40
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 40
+set ticks 0
+set checksum 40
+set mirror 40
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_041 | countdown | Counts register n from 41 to 0 and emits several summaries
+# family: countdown
+# variant: 041
+# initial register n: 41
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 41
+set ticks 0
+set checksum 41
+set mirror 41
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_042 | countdown | Counts register n from 42 to 0 and emits several summaries
+# family: countdown
+# variant: 042
+# initial register n: 42
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 42
+set ticks 0
+set checksum 42
+set mirror 42
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_043 | countdown | Counts register n from 43 to 0 and emits several summaries
+# family: countdown
+# variant: 043
+# initial register n: 43
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 43
+set ticks 0
+set checksum 43
+set mirror 43
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_044 | countdown | Counts register n from 44 to 0 and emits several summaries
+# family: countdown
+# variant: 044
+# initial register n: 44
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 44
+set ticks 0
+set checksum 44
+set mirror 44
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_045 | countdown | Counts register n from 45 to 0 and emits several summaries
+# family: countdown
+# variant: 045
+# initial register n: 45
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 45
+set ticks 0
+set checksum 45
+set mirror 45
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_046 | countdown | Counts register n from 46 to 0 and emits several summaries
+# family: countdown
+# variant: 046
+# initial register n: 46
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 46
+set ticks 0
+set checksum 46
+set mirror 46
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_047 | countdown | Counts register n from 47 to 0 and emits several summaries
+# family: countdown
+# variant: 047
+# initial register n: 47
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 47
+set ticks 0
+set checksum 47
+set mirror 47
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_048 | countdown | Counts register n from 48 to 0 and emits several summaries
+# family: countdown
+# variant: 048
+# initial register n: 48
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 48
+set ticks 0
+set checksum 48
+set mirror 48
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_049 | countdown | Counts register n from 49 to 0 and emits several summaries
+# family: countdown
+# variant: 049
+# initial register n: 49
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 49
+set ticks 0
+set checksum 49
+set mirror 49
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_050 | countdown | Counts register n from 50 to 0 and emits several summaries
+# family: countdown
+# variant: 050
+# initial register n: 50
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 50
+set ticks 0
+set checksum 50
+set mirror 50
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_051 | countdown | Counts register n from 51 to 0 and emits several summaries
+# family: countdown
+# variant: 051
+# initial register n: 51
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 51
+set ticks 0
+set checksum 51
+set mirror 51
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_052 | countdown | Counts register n from 52 to 0 and emits several summaries
+# family: countdown
+# variant: 052
+# initial register n: 52
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 52
+set ticks 0
+set checksum 52
+set mirror 52
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_053 | countdown | Counts register n from 53 to 0 and emits several summaries
+# family: countdown
+# variant: 053
+# initial register n: 53
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 53
+set ticks 0
+set checksum 53
+set mirror 53
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_054 | countdown | Counts register n from 54 to 0 and emits several summaries
+# family: countdown
+# variant: 054
+# initial register n: 54
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 54
+set ticks 0
+set checksum 54
+set mirror 54
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_055 | countdown | Counts register n from 55 to 0 and emits several summaries
+# family: countdown
+# variant: 055
+# initial register n: 55
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 55
+set ticks 0
+set checksum 55
+set mirror 55
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_056 | countdown | Counts register n from 56 to 0 and emits several summaries
+# family: countdown
+# variant: 056
+# initial register n: 56
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 56
+set ticks 0
+set checksum 56
+set mirror 56
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_057 | countdown | Counts register n from 57 to 0 and emits several summaries
+# family: countdown
+# variant: 057
+# initial register n: 57
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 57
+set ticks 0
+set checksum 57
+set mirror 57
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_058 | countdown | Counts register n from 58 to 0 and emits several summaries
+# family: countdown
+# variant: 058
+# initial register n: 58
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 58
+set ticks 0
+set checksum 58
+set mirror 58
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_059 | countdown | Counts register n from 59 to 0 and emits several summaries
+# family: countdown
+# variant: 059
+# initial register n: 59
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 59
+set ticks 0
+set checksum 59
+set mirror 59
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_060 | countdown | Counts register n from 60 to 0 and emits several summaries
+# family: countdown
+# variant: 060
+# initial register n: 60
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 60
+set ticks 0
+set checksum 60
+set mirror 60
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_061 | countdown | Counts register n from 61 to 0 and emits several summaries
+# family: countdown
+# variant: 061
+# initial register n: 61
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 61
+set ticks 0
+set checksum 61
+set mirror 61
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_062 | countdown | Counts register n from 62 to 0 and emits several summaries
+# family: countdown
+# variant: 062
+# initial register n: 62
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 62
+set ticks 0
+set checksum 62
+set mirror 62
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_063 | countdown | Counts register n from 63 to 0 and emits several summaries
+# family: countdown
+# variant: 063
+# initial register n: 63
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 63
+set ticks 0
+set checksum 63
+set mirror 63
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_064 | countdown | Counts register n from 64 to 0 and emits several summaries
+# family: countdown
+# variant: 064
+# initial register n: 64
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 64
+set ticks 0
+set checksum 64
+set mirror 64
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_065 | countdown | Counts register n from 65 to 0 and emits several summaries
+# family: countdown
+# variant: 065
+# initial register n: 65
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 65
+set ticks 0
+set checksum 65
+set mirror 65
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_066 | countdown | Counts register n from 66 to 0 and emits several summaries
+# family: countdown
+# variant: 066
+# initial register n: 66
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 66
+set ticks 0
+set checksum 66
+set mirror 66
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_067 | countdown | Counts register n from 67 to 0 and emits several summaries
+# family: countdown
+# variant: 067
+# initial register n: 67
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 67
+set ticks 0
+set checksum 67
+set mirror 67
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_068 | countdown | Counts register n from 68 to 0 and emits several summaries
+# family: countdown
+# variant: 068
+# initial register n: 68
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 68
+set ticks 0
+set checksum 68
+set mirror 68
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_069 | countdown | Counts register n from 69 to 0 and emits several summaries
+# family: countdown
+# variant: 069
+# initial register n: 69
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 69
+set ticks 0
+set checksum 69
+set mirror 69
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_070 | countdown | Counts register n from 70 to 0 and emits several summaries
+# family: countdown
+# variant: 070
+# initial register n: 70
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 70
+set ticks 0
+set checksum 70
+set mirror 70
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_071 | countdown | Counts register n from 71 to 0 and emits several summaries
+# family: countdown
+# variant: 071
+# initial register n: 71
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 71
+set ticks 0
+set checksum 71
+set mirror 71
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_072 | countdown | Counts register n from 72 to 0 and emits several summaries
+# family: countdown
+# variant: 072
+# initial register n: 72
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 72
+set ticks 0
+set checksum 72
+set mirror 72
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_073 | countdown | Counts register n from 73 to 0 and emits several summaries
+# family: countdown
+# variant: 073
+# initial register n: 73
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 73
+set ticks 0
+set checksum 73
+set mirror 73
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_074 | countdown | Counts register n from 74 to 0 and emits several summaries
+# family: countdown
+# variant: 074
+# initial register n: 74
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 74
+set ticks 0
+set checksum 74
+set mirror 74
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_075 | countdown | Counts register n from 75 to 0 and emits several summaries
+# family: countdown
+# variant: 075
+# initial register n: 75
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 75
+set ticks 0
+set checksum 75
+set mirror 75
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_076 | countdown | Counts register n from 76 to 0 and emits several summaries
+# family: countdown
+# variant: 076
+# initial register n: 76
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 76
+set ticks 0
+set checksum 76
+set mirror 76
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_077 | countdown | Counts register n from 77 to 0 and emits several summaries
+# family: countdown
+# variant: 077
+# initial register n: 77
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 77
+set ticks 0
+set checksum 77
+set mirror 77
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_078 | countdown | Counts register n from 78 to 0 and emits several summaries
+# family: countdown
+# variant: 078
+# initial register n: 78
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 78
+set ticks 0
+set checksum 78
+set mirror 78
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_079 | countdown | Counts register n from 79 to 0 and emits several summaries
+# family: countdown
+# variant: 079
+# initial register n: 79
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 79
+set ticks 0
+set checksum 79
+set mirror 79
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_080 | countdown | Counts register n from 80 to 0 and emits several summaries
+# family: countdown
+# variant: 080
+# initial register n: 80
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 80
+set ticks 0
+set checksum 80
+set mirror 80
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_081 | countdown | Counts register n from 81 to 0 and emits several summaries
+# family: countdown
+# variant: 081
+# initial register n: 81
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 81
+set ticks 0
+set checksum 81
+set mirror 81
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_082 | countdown | Counts register n from 82 to 0 and emits several summaries
+# family: countdown
+# variant: 082
+# initial register n: 82
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 82
+set ticks 0
+set checksum 82
+set mirror 82
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_083 | countdown | Counts register n from 83 to 0 and emits several summaries
+# family: countdown
+# variant: 083
+# initial register n: 83
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 83
+set ticks 0
+set checksum 83
+set mirror 83
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_084 | countdown | Counts register n from 84 to 0 and emits several summaries
+# family: countdown
+# variant: 084
+# initial register n: 84
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 84
+set ticks 0
+set checksum 84
+set mirror 84
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_085 | countdown | Counts register n from 85 to 0 and emits several summaries
+# family: countdown
+# variant: 085
+# initial register n: 85
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 85
+set ticks 0
+set checksum 85
+set mirror 85
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_086 | countdown | Counts register n from 86 to 0 and emits several summaries
+# family: countdown
+# variant: 086
+# initial register n: 86
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 86
+set ticks 0
+set checksum 86
+set mirror 86
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_087 | countdown | Counts register n from 87 to 0 and emits several summaries
+# family: countdown
+# variant: 087
+# initial register n: 87
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 87
+set ticks 0
+set checksum 87
+set mirror 87
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_088 | countdown | Counts register n from 88 to 0 and emits several summaries
+# family: countdown
+# variant: 088
+# initial register n: 88
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 88
+set ticks 0
+set checksum 88
+set mirror 88
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_089 | countdown | Counts register n from 89 to 0 and emits several summaries
+# family: countdown
+# variant: 089
+# initial register n: 89
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 89
+set ticks 0
+set checksum 89
+set mirror 89
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_090 | countdown | Counts register n from 90 to 0 and emits several summaries
+# family: countdown
+# variant: 090
+# initial register n: 90
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 90
+set ticks 0
+set checksum 90
+set mirror 90
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_091 | countdown | Counts register n from 91 to 0 and emits several summaries
+# family: countdown
+# variant: 091
+# initial register n: 91
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 91
+set ticks 0
+set checksum 91
+set mirror 91
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_092 | countdown | Counts register n from 92 to 0 and emits several summaries
+# family: countdown
+# variant: 092
+# initial register n: 92
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 92
+set ticks 0
+set checksum 92
+set mirror 92
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_093 | countdown | Counts register n from 93 to 0 and emits several summaries
+# family: countdown
+# variant: 093
+# initial register n: 93
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 93
+set ticks 0
+set checksum 93
+set mirror 93
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_094 | countdown | Counts register n from 94 to 0 and emits several summaries
+# family: countdown
+# variant: 094
+# initial register n: 94
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 94
+set ticks 0
+set checksum 94
+set mirror 94
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_095 | countdown | Counts register n from 95 to 0 and emits several summaries
+# family: countdown
+# variant: 095
+# initial register n: 95
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 95
+set ticks 0
+set checksum 95
+set mirror 95
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_096 | countdown | Counts register n from 96 to 0 and emits several summaries
+# family: countdown
+# variant: 096
+# initial register n: 96
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 96
+set ticks 0
+set checksum 96
+set mirror 96
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_097 | countdown | Counts register n from 97 to 0 and emits several summaries
+# family: countdown
+# variant: 097
+# initial register n: 97
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 97
+set ticks 0
+set checksum 97
+set mirror 97
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_098 | countdown | Counts register n from 98 to 0 and emits several summaries
+# family: countdown
+# variant: 098
+# initial register n: 98
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 98
+set ticks 0
+set checksum 98
+set mirror 98
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_099 | countdown | Counts register n from 99 to 0 and emits several summaries
+# family: countdown
+# variant: 099
+# initial register n: 99
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 99
+set ticks 0
+set checksum 99
+set mirror 99
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end
+
+=== countdown_100 | countdown | Counts register n from 100 to 0 and emits several summaries
+# family: countdown
+# variant: 100
+# initial register n: 100
+# intended use: observe a very short halting witness
+# small bound note: low budgets are enough here
+# medium bound note: every reasonable run should halt
+# large bound note: the verdict stays HALTS
+# ranking hint: n decreases on every pass
+# output note: ticks should equal the initial value
+# checkpoint note: mirror tracks the current n
+# branch note: loop_guard adds a tiny detour
+# analyst question: how small can the bound be?
+# expected shape: one loop and one halt path
+set n 100
+set ticks 0
+set checksum 100
+set mirror 100
+set marker 1
+bootstrap:
+nop
+nop
+copy marker n
+copy mirror n
+loop:
+jz n done
+add ticks 1
+sub n 1
+copy mirror n
+copy marker ticks
+jnz mirror loop_guard
+jump loop
+loop_guard:
+nop
+jump loop
+done:
+out ticks
+out checksum
+out marker
+halt
+=== end

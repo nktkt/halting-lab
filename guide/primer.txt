@@ -1,0 +1,41 @@
+@@ primer | Halting Lab Primer
+Halting Lab is a bounded-analysis playground.
+It runs a small DSL on a deterministic machine.
+It can confirm halting when the witness appears soon enough.
+It can confirm looping when the full state repeats.
+It can also say `UNKNOWN`.
+
+The `UNKNOWN` case is not noise.
+It is the pedagogical center of the project.
+
+Use `list` to inspect available corpus entries.
+Use `show` to read one sample.
+Use `run` to execute a sample concretely.
+Use `analyze` to ask for a bounded verdict.
+
+The countdown family is useful because the programs always halt.
+The delayed family is useful because small budgets often stop too early.
+Comparing those two families gives you the intuition for bounded reasoning.
+
+The machine model is tiny on purpose.
+Registers default to zero.
+The program counter advances through a fixed instruction list.
+Labels are resolved during parsing.
+The state signature includes the program counter, registers, and output summary.
+
+That signature is what allows the analyzer to witness loops in the toy machine.
+If the machine repeats the same state, the future path repeats as well.
+
+None of this solves the general halting problem.
+It gives you a local, inspectable laboratory.
+
+Suggested session:
+1. `java -jar halting-lab.jar list 8`
+2. `java -jar halting-lab.jar analyze countdown_005 20`
+3. `java -jar halting-lab.jar analyze delayed_050 20`
+4. `java -jar halting-lab.jar analyze delayed_050 400`
+
+That sequence usually shows the jump from `UNKNOWN` to `HALTS`.
+
+If you want to extend the repository, a loop-heavy corpus is the next natural addition.
+If you want better tooling, trace export and parser diagnostics are good targets.

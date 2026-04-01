@@ -1,0 +1,4299 @@
+=== delayed_001 | delayed | Burns warmup steps before counting payload 1 down to zero
+# family: delayed
+# variant: 001
+# initial warmup register: 2
+# initial payload register: 1
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 2
+set payload 1
+set ticks 0
+set checksum 1
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_002 | delayed | Burns warmup steps before counting payload 2 down to zero
+# family: delayed
+# variant: 002
+# initial warmup register: 4
+# initial payload register: 2
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 4
+set payload 2
+set ticks 0
+set checksum 2
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_003 | delayed | Burns warmup steps before counting payload 3 down to zero
+# family: delayed
+# variant: 003
+# initial warmup register: 6
+# initial payload register: 3
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 6
+set payload 3
+set ticks 0
+set checksum 3
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_004 | delayed | Burns warmup steps before counting payload 4 down to zero
+# family: delayed
+# variant: 004
+# initial warmup register: 8
+# initial payload register: 4
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 8
+set payload 4
+set ticks 0
+set checksum 4
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_005 | delayed | Burns warmup steps before counting payload 5 down to zero
+# family: delayed
+# variant: 005
+# initial warmup register: 10
+# initial payload register: 5
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 10
+set payload 5
+set ticks 0
+set checksum 5
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_006 | delayed | Burns warmup steps before counting payload 6 down to zero
+# family: delayed
+# variant: 006
+# initial warmup register: 12
+# initial payload register: 6
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 12
+set payload 6
+set ticks 0
+set checksum 6
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_007 | delayed | Burns warmup steps before counting payload 7 down to zero
+# family: delayed
+# variant: 007
+# initial warmup register: 14
+# initial payload register: 7
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 14
+set payload 7
+set ticks 0
+set checksum 7
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_008 | delayed | Burns warmup steps before counting payload 8 down to zero
+# family: delayed
+# variant: 008
+# initial warmup register: 16
+# initial payload register: 8
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 16
+set payload 8
+set ticks 0
+set checksum 8
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_009 | delayed | Burns warmup steps before counting payload 9 down to zero
+# family: delayed
+# variant: 009
+# initial warmup register: 18
+# initial payload register: 9
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 18
+set payload 9
+set ticks 0
+set checksum 9
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_010 | delayed | Burns warmup steps before counting payload 10 down to zero
+# family: delayed
+# variant: 010
+# initial warmup register: 20
+# initial payload register: 10
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 20
+set payload 10
+set ticks 0
+set checksum 10
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_011 | delayed | Burns warmup steps before counting payload 11 down to zero
+# family: delayed
+# variant: 011
+# initial warmup register: 22
+# initial payload register: 11
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 22
+set payload 11
+set ticks 0
+set checksum 11
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_012 | delayed | Burns warmup steps before counting payload 12 down to zero
+# family: delayed
+# variant: 012
+# initial warmup register: 24
+# initial payload register: 12
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 24
+set payload 12
+set ticks 0
+set checksum 12
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_013 | delayed | Burns warmup steps before counting payload 13 down to zero
+# family: delayed
+# variant: 013
+# initial warmup register: 26
+# initial payload register: 13
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 26
+set payload 13
+set ticks 0
+set checksum 13
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_014 | delayed | Burns warmup steps before counting payload 14 down to zero
+# family: delayed
+# variant: 014
+# initial warmup register: 28
+# initial payload register: 14
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 28
+set payload 14
+set ticks 0
+set checksum 14
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_015 | delayed | Burns warmup steps before counting payload 15 down to zero
+# family: delayed
+# variant: 015
+# initial warmup register: 30
+# initial payload register: 15
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 30
+set payload 15
+set ticks 0
+set checksum 15
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_016 | delayed | Burns warmup steps before counting payload 16 down to zero
+# family: delayed
+# variant: 016
+# initial warmup register: 32
+# initial payload register: 16
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 32
+set payload 16
+set ticks 0
+set checksum 16
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_017 | delayed | Burns warmup steps before counting payload 17 down to zero
+# family: delayed
+# variant: 017
+# initial warmup register: 34
+# initial payload register: 17
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 34
+set payload 17
+set ticks 0
+set checksum 17
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_018 | delayed | Burns warmup steps before counting payload 18 down to zero
+# family: delayed
+# variant: 018
+# initial warmup register: 36
+# initial payload register: 18
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 36
+set payload 18
+set ticks 0
+set checksum 18
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_019 | delayed | Burns warmup steps before counting payload 19 down to zero
+# family: delayed
+# variant: 019
+# initial warmup register: 38
+# initial payload register: 19
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 38
+set payload 19
+set ticks 0
+set checksum 19
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_020 | delayed | Burns warmup steps before counting payload 20 down to zero
+# family: delayed
+# variant: 020
+# initial warmup register: 40
+# initial payload register: 20
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 40
+set payload 20
+set ticks 0
+set checksum 20
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_021 | delayed | Burns warmup steps before counting payload 21 down to zero
+# family: delayed
+# variant: 021
+# initial warmup register: 42
+# initial payload register: 21
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 42
+set payload 21
+set ticks 0
+set checksum 21
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_022 | delayed | Burns warmup steps before counting payload 22 down to zero
+# family: delayed
+# variant: 022
+# initial warmup register: 44
+# initial payload register: 22
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 44
+set payload 22
+set ticks 0
+set checksum 22
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_023 | delayed | Burns warmup steps before counting payload 23 down to zero
+# family: delayed
+# variant: 023
+# initial warmup register: 46
+# initial payload register: 23
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 46
+set payload 23
+set ticks 0
+set checksum 23
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_024 | delayed | Burns warmup steps before counting payload 24 down to zero
+# family: delayed
+# variant: 024
+# initial warmup register: 48
+# initial payload register: 24
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 48
+set payload 24
+set ticks 0
+set checksum 24
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_025 | delayed | Burns warmup steps before counting payload 25 down to zero
+# family: delayed
+# variant: 025
+# initial warmup register: 50
+# initial payload register: 25
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 50
+set payload 25
+set ticks 0
+set checksum 25
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_026 | delayed | Burns warmup steps before counting payload 26 down to zero
+# family: delayed
+# variant: 026
+# initial warmup register: 52
+# initial payload register: 26
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 52
+set payload 26
+set ticks 0
+set checksum 26
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_027 | delayed | Burns warmup steps before counting payload 27 down to zero
+# family: delayed
+# variant: 027
+# initial warmup register: 54
+# initial payload register: 27
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 54
+set payload 27
+set ticks 0
+set checksum 27
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_028 | delayed | Burns warmup steps before counting payload 28 down to zero
+# family: delayed
+# variant: 028
+# initial warmup register: 56
+# initial payload register: 28
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 56
+set payload 28
+set ticks 0
+set checksum 28
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_029 | delayed | Burns warmup steps before counting payload 29 down to zero
+# family: delayed
+# variant: 029
+# initial warmup register: 58
+# initial payload register: 29
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 58
+set payload 29
+set ticks 0
+set checksum 29
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_030 | delayed | Burns warmup steps before counting payload 30 down to zero
+# family: delayed
+# variant: 030
+# initial warmup register: 60
+# initial payload register: 30
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 60
+set payload 30
+set ticks 0
+set checksum 30
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_031 | delayed | Burns warmup steps before counting payload 31 down to zero
+# family: delayed
+# variant: 031
+# initial warmup register: 62
+# initial payload register: 31
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 62
+set payload 31
+set ticks 0
+set checksum 31
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_032 | delayed | Burns warmup steps before counting payload 32 down to zero
+# family: delayed
+# variant: 032
+# initial warmup register: 64
+# initial payload register: 32
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 64
+set payload 32
+set ticks 0
+set checksum 32
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_033 | delayed | Burns warmup steps before counting payload 33 down to zero
+# family: delayed
+# variant: 033
+# initial warmup register: 66
+# initial payload register: 33
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 66
+set payload 33
+set ticks 0
+set checksum 33
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_034 | delayed | Burns warmup steps before counting payload 34 down to zero
+# family: delayed
+# variant: 034
+# initial warmup register: 68
+# initial payload register: 34
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 68
+set payload 34
+set ticks 0
+set checksum 34
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_035 | delayed | Burns warmup steps before counting payload 35 down to zero
+# family: delayed
+# variant: 035
+# initial warmup register: 70
+# initial payload register: 35
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 70
+set payload 35
+set ticks 0
+set checksum 35
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_036 | delayed | Burns warmup steps before counting payload 36 down to zero
+# family: delayed
+# variant: 036
+# initial warmup register: 72
+# initial payload register: 36
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 72
+set payload 36
+set ticks 0
+set checksum 36
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_037 | delayed | Burns warmup steps before counting payload 37 down to zero
+# family: delayed
+# variant: 037
+# initial warmup register: 74
+# initial payload register: 37
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 74
+set payload 37
+set ticks 0
+set checksum 37
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_038 | delayed | Burns warmup steps before counting payload 38 down to zero
+# family: delayed
+# variant: 038
+# initial warmup register: 76
+# initial payload register: 38
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 76
+set payload 38
+set ticks 0
+set checksum 38
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_039 | delayed | Burns warmup steps before counting payload 39 down to zero
+# family: delayed
+# variant: 039
+# initial warmup register: 78
+# initial payload register: 39
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 78
+set payload 39
+set ticks 0
+set checksum 39
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_040 | delayed | Burns warmup steps before counting payload 40 down to zero
+# family: delayed
+# variant: 040
+# initial warmup register: 80
+# initial payload register: 40
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 80
+set payload 40
+set ticks 0
+set checksum 40
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_041 | delayed | Burns warmup steps before counting payload 41 down to zero
+# family: delayed
+# variant: 041
+# initial warmup register: 82
+# initial payload register: 41
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 82
+set payload 41
+set ticks 0
+set checksum 41
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_042 | delayed | Burns warmup steps before counting payload 42 down to zero
+# family: delayed
+# variant: 042
+# initial warmup register: 84
+# initial payload register: 42
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 84
+set payload 42
+set ticks 0
+set checksum 42
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_043 | delayed | Burns warmup steps before counting payload 43 down to zero
+# family: delayed
+# variant: 043
+# initial warmup register: 86
+# initial payload register: 43
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 86
+set payload 43
+set ticks 0
+set checksum 43
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_044 | delayed | Burns warmup steps before counting payload 44 down to zero
+# family: delayed
+# variant: 044
+# initial warmup register: 88
+# initial payload register: 44
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 88
+set payload 44
+set ticks 0
+set checksum 44
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_045 | delayed | Burns warmup steps before counting payload 45 down to zero
+# family: delayed
+# variant: 045
+# initial warmup register: 90
+# initial payload register: 45
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 90
+set payload 45
+set ticks 0
+set checksum 45
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_046 | delayed | Burns warmup steps before counting payload 46 down to zero
+# family: delayed
+# variant: 046
+# initial warmup register: 92
+# initial payload register: 46
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 92
+set payload 46
+set ticks 0
+set checksum 46
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_047 | delayed | Burns warmup steps before counting payload 47 down to zero
+# family: delayed
+# variant: 047
+# initial warmup register: 94
+# initial payload register: 47
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 94
+set payload 47
+set ticks 0
+set checksum 47
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_048 | delayed | Burns warmup steps before counting payload 48 down to zero
+# family: delayed
+# variant: 048
+# initial warmup register: 96
+# initial payload register: 48
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 96
+set payload 48
+set ticks 0
+set checksum 48
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_049 | delayed | Burns warmup steps before counting payload 49 down to zero
+# family: delayed
+# variant: 049
+# initial warmup register: 98
+# initial payload register: 49
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 98
+set payload 49
+set ticks 0
+set checksum 49
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_050 | delayed | Burns warmup steps before counting payload 50 down to zero
+# family: delayed
+# variant: 050
+# initial warmup register: 100
+# initial payload register: 50
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 100
+set payload 50
+set ticks 0
+set checksum 50
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_051 | delayed | Burns warmup steps before counting payload 51 down to zero
+# family: delayed
+# variant: 051
+# initial warmup register: 102
+# initial payload register: 51
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 102
+set payload 51
+set ticks 0
+set checksum 51
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_052 | delayed | Burns warmup steps before counting payload 52 down to zero
+# family: delayed
+# variant: 052
+# initial warmup register: 104
+# initial payload register: 52
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 104
+set payload 52
+set ticks 0
+set checksum 52
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_053 | delayed | Burns warmup steps before counting payload 53 down to zero
+# family: delayed
+# variant: 053
+# initial warmup register: 106
+# initial payload register: 53
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 106
+set payload 53
+set ticks 0
+set checksum 53
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_054 | delayed | Burns warmup steps before counting payload 54 down to zero
+# family: delayed
+# variant: 054
+# initial warmup register: 108
+# initial payload register: 54
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 108
+set payload 54
+set ticks 0
+set checksum 54
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_055 | delayed | Burns warmup steps before counting payload 55 down to zero
+# family: delayed
+# variant: 055
+# initial warmup register: 110
+# initial payload register: 55
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 110
+set payload 55
+set ticks 0
+set checksum 55
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_056 | delayed | Burns warmup steps before counting payload 56 down to zero
+# family: delayed
+# variant: 056
+# initial warmup register: 112
+# initial payload register: 56
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 112
+set payload 56
+set ticks 0
+set checksum 56
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_057 | delayed | Burns warmup steps before counting payload 57 down to zero
+# family: delayed
+# variant: 057
+# initial warmup register: 114
+# initial payload register: 57
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 114
+set payload 57
+set ticks 0
+set checksum 57
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_058 | delayed | Burns warmup steps before counting payload 58 down to zero
+# family: delayed
+# variant: 058
+# initial warmup register: 116
+# initial payload register: 58
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 116
+set payload 58
+set ticks 0
+set checksum 58
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_059 | delayed | Burns warmup steps before counting payload 59 down to zero
+# family: delayed
+# variant: 059
+# initial warmup register: 118
+# initial payload register: 59
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 118
+set payload 59
+set ticks 0
+set checksum 59
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_060 | delayed | Burns warmup steps before counting payload 60 down to zero
+# family: delayed
+# variant: 060
+# initial warmup register: 120
+# initial payload register: 60
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 120
+set payload 60
+set ticks 0
+set checksum 60
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_061 | delayed | Burns warmup steps before counting payload 61 down to zero
+# family: delayed
+# variant: 061
+# initial warmup register: 122
+# initial payload register: 61
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 122
+set payload 61
+set ticks 0
+set checksum 61
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_062 | delayed | Burns warmup steps before counting payload 62 down to zero
+# family: delayed
+# variant: 062
+# initial warmup register: 124
+# initial payload register: 62
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 124
+set payload 62
+set ticks 0
+set checksum 62
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_063 | delayed | Burns warmup steps before counting payload 63 down to zero
+# family: delayed
+# variant: 063
+# initial warmup register: 126
+# initial payload register: 63
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 126
+set payload 63
+set ticks 0
+set checksum 63
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_064 | delayed | Burns warmup steps before counting payload 64 down to zero
+# family: delayed
+# variant: 064
+# initial warmup register: 128
+# initial payload register: 64
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 128
+set payload 64
+set ticks 0
+set checksum 64
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_065 | delayed | Burns warmup steps before counting payload 65 down to zero
+# family: delayed
+# variant: 065
+# initial warmup register: 130
+# initial payload register: 65
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 130
+set payload 65
+set ticks 0
+set checksum 65
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_066 | delayed | Burns warmup steps before counting payload 66 down to zero
+# family: delayed
+# variant: 066
+# initial warmup register: 132
+# initial payload register: 66
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 132
+set payload 66
+set ticks 0
+set checksum 66
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_067 | delayed | Burns warmup steps before counting payload 67 down to zero
+# family: delayed
+# variant: 067
+# initial warmup register: 134
+# initial payload register: 67
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 134
+set payload 67
+set ticks 0
+set checksum 67
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_068 | delayed | Burns warmup steps before counting payload 68 down to zero
+# family: delayed
+# variant: 068
+# initial warmup register: 136
+# initial payload register: 68
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 136
+set payload 68
+set ticks 0
+set checksum 68
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_069 | delayed | Burns warmup steps before counting payload 69 down to zero
+# family: delayed
+# variant: 069
+# initial warmup register: 138
+# initial payload register: 69
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 138
+set payload 69
+set ticks 0
+set checksum 69
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_070 | delayed | Burns warmup steps before counting payload 70 down to zero
+# family: delayed
+# variant: 070
+# initial warmup register: 140
+# initial payload register: 70
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 140
+set payload 70
+set ticks 0
+set checksum 70
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_071 | delayed | Burns warmup steps before counting payload 71 down to zero
+# family: delayed
+# variant: 071
+# initial warmup register: 142
+# initial payload register: 71
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 142
+set payload 71
+set ticks 0
+set checksum 71
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_072 | delayed | Burns warmup steps before counting payload 72 down to zero
+# family: delayed
+# variant: 072
+# initial warmup register: 144
+# initial payload register: 72
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 144
+set payload 72
+set ticks 0
+set checksum 72
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_073 | delayed | Burns warmup steps before counting payload 73 down to zero
+# family: delayed
+# variant: 073
+# initial warmup register: 146
+# initial payload register: 73
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 146
+set payload 73
+set ticks 0
+set checksum 73
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_074 | delayed | Burns warmup steps before counting payload 74 down to zero
+# family: delayed
+# variant: 074
+# initial warmup register: 148
+# initial payload register: 74
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 148
+set payload 74
+set ticks 0
+set checksum 74
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_075 | delayed | Burns warmup steps before counting payload 75 down to zero
+# family: delayed
+# variant: 075
+# initial warmup register: 150
+# initial payload register: 75
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 150
+set payload 75
+set ticks 0
+set checksum 75
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_076 | delayed | Burns warmup steps before counting payload 76 down to zero
+# family: delayed
+# variant: 076
+# initial warmup register: 152
+# initial payload register: 76
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 152
+set payload 76
+set ticks 0
+set checksum 76
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_077 | delayed | Burns warmup steps before counting payload 77 down to zero
+# family: delayed
+# variant: 077
+# initial warmup register: 154
+# initial payload register: 77
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 154
+set payload 77
+set ticks 0
+set checksum 77
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_078 | delayed | Burns warmup steps before counting payload 78 down to zero
+# family: delayed
+# variant: 078
+# initial warmup register: 156
+# initial payload register: 78
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 156
+set payload 78
+set ticks 0
+set checksum 78
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_079 | delayed | Burns warmup steps before counting payload 79 down to zero
+# family: delayed
+# variant: 079
+# initial warmup register: 158
+# initial payload register: 79
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 158
+set payload 79
+set ticks 0
+set checksum 79
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_080 | delayed | Burns warmup steps before counting payload 80 down to zero
+# family: delayed
+# variant: 080
+# initial warmup register: 160
+# initial payload register: 80
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 160
+set payload 80
+set ticks 0
+set checksum 80
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_081 | delayed | Burns warmup steps before counting payload 81 down to zero
+# family: delayed
+# variant: 081
+# initial warmup register: 162
+# initial payload register: 81
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 162
+set payload 81
+set ticks 0
+set checksum 81
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_082 | delayed | Burns warmup steps before counting payload 82 down to zero
+# family: delayed
+# variant: 082
+# initial warmup register: 164
+# initial payload register: 82
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 164
+set payload 82
+set ticks 0
+set checksum 82
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_083 | delayed | Burns warmup steps before counting payload 83 down to zero
+# family: delayed
+# variant: 083
+# initial warmup register: 166
+# initial payload register: 83
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 166
+set payload 83
+set ticks 0
+set checksum 83
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_084 | delayed | Burns warmup steps before counting payload 84 down to zero
+# family: delayed
+# variant: 084
+# initial warmup register: 168
+# initial payload register: 84
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 168
+set payload 84
+set ticks 0
+set checksum 84
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_085 | delayed | Burns warmup steps before counting payload 85 down to zero
+# family: delayed
+# variant: 085
+# initial warmup register: 170
+# initial payload register: 85
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 170
+set payload 85
+set ticks 0
+set checksum 85
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_086 | delayed | Burns warmup steps before counting payload 86 down to zero
+# family: delayed
+# variant: 086
+# initial warmup register: 172
+# initial payload register: 86
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 172
+set payload 86
+set ticks 0
+set checksum 86
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_087 | delayed | Burns warmup steps before counting payload 87 down to zero
+# family: delayed
+# variant: 087
+# initial warmup register: 174
+# initial payload register: 87
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 174
+set payload 87
+set ticks 0
+set checksum 87
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_088 | delayed | Burns warmup steps before counting payload 88 down to zero
+# family: delayed
+# variant: 088
+# initial warmup register: 176
+# initial payload register: 88
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 176
+set payload 88
+set ticks 0
+set checksum 88
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_089 | delayed | Burns warmup steps before counting payload 89 down to zero
+# family: delayed
+# variant: 089
+# initial warmup register: 178
+# initial payload register: 89
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 178
+set payload 89
+set ticks 0
+set checksum 89
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_090 | delayed | Burns warmup steps before counting payload 90 down to zero
+# family: delayed
+# variant: 090
+# initial warmup register: 180
+# initial payload register: 90
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 180
+set payload 90
+set ticks 0
+set checksum 90
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_091 | delayed | Burns warmup steps before counting payload 91 down to zero
+# family: delayed
+# variant: 091
+# initial warmup register: 182
+# initial payload register: 91
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 182
+set payload 91
+set ticks 0
+set checksum 91
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_092 | delayed | Burns warmup steps before counting payload 92 down to zero
+# family: delayed
+# variant: 092
+# initial warmup register: 184
+# initial payload register: 92
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 184
+set payload 92
+set ticks 0
+set checksum 92
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_093 | delayed | Burns warmup steps before counting payload 93 down to zero
+# family: delayed
+# variant: 093
+# initial warmup register: 186
+# initial payload register: 93
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 186
+set payload 93
+set ticks 0
+set checksum 93
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_094 | delayed | Burns warmup steps before counting payload 94 down to zero
+# family: delayed
+# variant: 094
+# initial warmup register: 188
+# initial payload register: 94
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 188
+set payload 94
+set ticks 0
+set checksum 94
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_095 | delayed | Burns warmup steps before counting payload 95 down to zero
+# family: delayed
+# variant: 095
+# initial warmup register: 190
+# initial payload register: 95
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 190
+set payload 95
+set ticks 0
+set checksum 95
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_096 | delayed | Burns warmup steps before counting payload 96 down to zero
+# family: delayed
+# variant: 096
+# initial warmup register: 192
+# initial payload register: 96
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 192
+set payload 96
+set ticks 0
+set checksum 96
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_097 | delayed | Burns warmup steps before counting payload 97 down to zero
+# family: delayed
+# variant: 097
+# initial warmup register: 194
+# initial payload register: 97
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 194
+set payload 97
+set ticks 0
+set checksum 97
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_098 | delayed | Burns warmup steps before counting payload 98 down to zero
+# family: delayed
+# variant: 098
+# initial warmup register: 196
+# initial payload register: 98
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 196
+set payload 98
+set ticks 0
+set checksum 98
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_099 | delayed | Burns warmup steps before counting payload 99 down to zero
+# family: delayed
+# variant: 099
+# initial warmup register: 198
+# initial payload register: 99
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 198
+set payload 99
+set ticks 0
+set checksum 99
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
+
+=== delayed_100 | delayed | Burns warmup steps before counting payload 100 down to zero
+# family: delayed
+# variant: 100
+# initial warmup register: 200
+# initial payload register: 100
+# intended use: compare short and long budgets
+# small bound note: tiny budgets can miss the halt
+# medium bound note: the witness appears after warmup
+# large bound note: the verdict stays HALTS
+# ranking hint: warmup and payload both decrease
+# output note: stage counts the warmup region
+# checkpoint note: mirror tracks the payload region
+# branch note: branch adds a tiny detour in the main loop
+# analyst question: where does UNKNOWN disappear?
+# expected shape: staging loop then payload loop
+set warmup 200
+set payload 100
+set ticks 0
+set checksum 100
+set stage 0
+staging:
+jz warmup main
+sub warmup 1
+add stage 1
+jump staging
+main:
+copy mirror payload
+jz payload done
+add ticks 1
+sub payload 1
+copy mirror payload
+jnz mirror branch
+jump main
+branch:
+nop
+jump main
+done:
+out stage
+out ticks
+out checksum
+halt
+=== end
